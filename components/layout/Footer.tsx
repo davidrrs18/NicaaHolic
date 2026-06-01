@@ -64,7 +64,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm">
                 <FaWhatsapp className="text-gray-500" />
-                <a href="https://wa.me/+50587802300" className="text-gray-400 hover:text-white transition">+505 8780 2300</a>
+                <a href="https://wa.me/+50587304861" className="text-gray-400 hover:text-white transition">+505 8780 2300</a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <FaEnvelope className="text-gray-500" />

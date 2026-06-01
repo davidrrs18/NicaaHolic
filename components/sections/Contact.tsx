@@ -9,7 +9,7 @@ export const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Hola! Me interesa personalizar una sudadera.%0A%0ANombre: ${formData.name}%0ADiseño: ${formData.design}%0ATalle: ${formData.size}`;
-    window.open(`https://wa.me/+50587802300?text=${message}`, '_blank');
+    window.open(`https://wa.me/+50587304861?text=${message}`, '_blank');
   };
 
   return (
@@ -24,7 +24,7 @@ export const Contact = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold text-lg mb-2">📞 WhatsApp</h3>
-                <p className="text-gray-300">+505 8780 2300</p>
+                <p className="text-gray-300">+505 8730 4861</p>
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-2">📧 Email</h3>
