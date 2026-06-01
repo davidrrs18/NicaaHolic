@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { IoClose, IoArrowBack, IoArrowForward } from 'react-icons/io5';
+import { IoClose } from 'react-icons/io5';
 
 const products = [
   { 

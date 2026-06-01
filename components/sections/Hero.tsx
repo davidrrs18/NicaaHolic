@@ -7,10 +7,8 @@ export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Grid con orden responsive */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
-          {/* Imagen - En móvil primero (order-1), en desktop a la derecha (md:order-2) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -26,7 +24,6 @@ export const Hero = () => {
             />
           </motion.div>
 
-          {/* Texto - En móvil después (order-2), en desktop a la izquierda (md:order-1) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -39,8 +36,8 @@ export const Hero = () => {
             </h1>
             <p className="text-base md:text-xl text-gray-600 mb-8">
               Nicaaholic es más que una marca de camisetas; es una forma de expresar el orgullo, 
-              la cultura y la esencia de ser nicaragüense. Su nombre nace de la unión de "Nica", 
-              una expresión de identidad nacional, y "aholic", que representa una pasión profunda 
+              la cultura y la esencia de ser nicaragüense. Su nombre nace de la unión de &ldquo;Nica&rdquo;, 
+              una expresión de identidad nacional, y &ldquo;aholic&rdquo;, que representa una pasión profunda 
               por lo que se ama. Nicaaholic está diseñada para quienes llevan a Nicaragua en el corazón, 
               dentro y fuera de sus fronteras, ofreciendo prendas que cuentan historias, resaltan 
               nuestras raíces y celebran nuestras tradiciones con un estilo moderno y auténtico. 

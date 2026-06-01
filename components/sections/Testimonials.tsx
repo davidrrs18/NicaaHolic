@@ -3,15 +3,13 @@
 import { useState, useEffect } from 'react';
 import { testimonials } from '@/data';
 import { Container } from '@/components/ui/Container';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import Image from 'next/image';
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
     
@@ -25,7 +23,7 @@ export const Testimonials = () => {
   const nextTestimonial = () => {
     setIsAutoPlaying(false);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    setTimeout(() => setIsAutoPlaying(true), 10000); // Reactiva auto-play después de 10s
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const prevTestimonial = () => {
@@ -39,7 +37,6 @@ export const Testimonials = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
       <Container>
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +44,7 @@ export const Testimonials = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Lo que dicen nuestros{" "}
+            Lo que dicen nuestros{' '}
             <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
               clientes
             </span>
@@ -57,7 +54,6 @@ export const Testimonials = () => {
           </p>
         </motion.div>
 
-        {/* Main Testimonial Card */}
         <div className="max-w-4xl mx-auto">
           <motion.div
             key={currentIndex}
@@ -67,25 +63,20 @@ export const Testimonials = () => {
             transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative"
           >
-            {/* Quote Icon */}
             <FaQuoteLeft className="absolute text-gray-100 text-6xl md:text-8xl top-6 left-6" />
             
-            {/* Stars */}
             <div className="flex gap-1 mb-6 relative z-10">
               {[...Array(currentTestimonial.rating)].map((_, i) => (
                 <FaStar key={i} className="text-yellow-400 text-xl" />
               ))}
             </div>
 
-            {/* Content */}
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 relative z-10">
-              "{currentTestimonial.content}"
+              &ldquo;{currentTestimonial.content}&rdquo;
             </p>
 
-            {/* Author Info */}
             <div className="flex items-center gap-4 mb-8">
               <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gray-200">
-                
                 <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center text-white text-2xl font-bold">
                   {currentTestimonial.name.charAt(0)}
                 </div>
@@ -96,7 +87,6 @@ export const Testimonials = () => {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
             <div className="flex justify-center gap-4">
               <button
                 onClick={prevTestimonial}
@@ -115,7 +105,6 @@ export const Testimonials = () => {
             </div>
           </motion.div>
 
-          {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-8">
             {testimonials.map((_, idx) => (
               <button
